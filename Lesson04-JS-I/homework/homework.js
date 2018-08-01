@@ -1,13 +1,13 @@
 //In these first 6 questions, replace `null` with the answer
 
 //create a string variable, it can contain anything
-const newString = "hello world";
+const newString = 'hello world';
 
 //create a number variable, it an be any number
-const newNum = 99 ;
+const newNum = 99;
 
 //create a boolean variable
-const newBool = true ;
+const newBool = true;
 
 //solve the following math problem
 const newSubtract = 10 - 5 === 5;
@@ -16,7 +16,7 @@ const newSubtract = 10 - 5 === 5;
 const newMultiply = 10 * 4 === 40 ;
 
 //Solve the following math problem:
-const newModulo = 21 % 5 === 1 ;
+const newModulo = 21 % 5 === 1;
 
 
 
@@ -107,9 +107,9 @@ function getRemainder(x, y) {
 
 function isEven(num) {
   if(num % 2 === 0) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 
   // return true if num is even
