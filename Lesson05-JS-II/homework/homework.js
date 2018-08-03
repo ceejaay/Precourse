@@ -51,6 +51,11 @@ function isInRange(num) {
 
 function isInteger(num) {
   // return true if num is an integer
+  if(Number.isInteger(num)) {
+    return true;
+  } else {
+    return false;
+  }
   // 0.8 -> false
   // 1 -> true
   // -10 -> true
@@ -59,6 +64,13 @@ function isInteger(num) {
 }
 
 function fizzBuzz(num) {
+  if(num % 5 === 0 && num % 3 ==) {
+    return 'fizzbuzz';
+  } else if(num % 5 === 0) {
+    return 'buzz';
+  } else if(num % 3 === 0) {
+    return 'fizz';
+  }
   // if num is divisible by 3 return 'fizz'
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
