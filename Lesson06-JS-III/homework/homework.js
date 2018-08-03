@@ -16,10 +16,10 @@ function getArrayLength(arr) {
 }
 
 function incrementByOne(arr) {
-  const arr1 = arr.map(x += x + 1);
-  return arr1;
+  /* const arr1 = arr.map(x += x + 1); */
+  /* return arr1; */
 
-  // arr is an array of integers  
+  // arr is an array of integers
   // increase each integer by one
   // return the array
 }
@@ -66,7 +66,7 @@ function addNumbers(numbers) {
 function averageTestScore(testScores) {
   var total_numbers = 0;
   for(let i=0;i<testScores.length;i++) {
-    total_numbers += numbers[i];
+    total_numbers += testScores[i];
 
   }
   return total_numbers / testScores.length;
@@ -80,6 +80,12 @@ function largestNumber(numbers) {
 }
 
 function multiplyArguments() {
+  var numbers = 1;
+  for(let i=0;i<arguments.length;i++) {
+    numbers *= arguments[i];
+  }
+  return numbers;
+
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
