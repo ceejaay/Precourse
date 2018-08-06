@@ -16,8 +16,11 @@ function getArrayLength(arr) {
 }
 
 function incrementByOne(arr) {
-  /* const arr1 = arr.map(x += x + 1); */
-  /* return arr1; */
+  const new_array = [];
+  for(let i=0;i<arr.length;i++) {
+    new_array.push(arr[i] + 1);
+  }
+  return new_array;
 
   // arr is an array of integers
   // increase each integer by one
@@ -40,6 +43,7 @@ function addItemToFront(arr, item) {
 }
 
 function wordsToSentence(words) {
+  return words.join(' ');
   // words is an array of strings
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
@@ -75,6 +79,7 @@ function averageTestScore(testScores) {
 }
 
 function largestNumber(numbers) {
+  return Math.max(...numbers);
   // numbers is an array of integers
   // return the largest integer
 }
