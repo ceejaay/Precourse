@@ -46,7 +46,7 @@ function newUser(name, email, password) {
     name: name,
     email: email,
     password: password
-  }
+  };
   return user;
   // create a new object with properties matching the arguments passed in.
   // return the new object
@@ -115,7 +115,7 @@ function setUsersToPremium(users) {
 }
 
 function sumUserPostLikes(user) {
-  var total = 0
+  var total = 0;
     for(let i=0;i<user.posts.length;i++) {
       total += user.posts[i].likes;
     }
@@ -132,7 +132,7 @@ function addCalculateDiscountPriceMethod(storeItem) {
   // add a method to the storeItem object called 'calculateDiscountPrice'
   storeItem.prototype.calculateDiscountPrice = function() {
 
-  }
+  };
   // this method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
   // the method then subtracts the discount from the price and returns the discounted price
   // return storeItem at the end of the function
