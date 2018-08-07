@@ -1,6 +1,14 @@
 // Do not change any of the function names
 
 function makeCat(name, age) {
+  const cat = {
+    name: name, 
+    age: age,
+    meow: function() {
+      return 'Meow!';
+    }
+  };
+  return cat;
   // create a new object with a name property with the value set to the name argument
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
@@ -14,62 +22,105 @@ function addProperty(object, property) {
 }
 
 function invokeMethod(object, method) {
+  object.method();
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
 }
 
 function multiplyMysteryNumberByFive(mysteryNumberObject) {
+  return mysteryNumberObject.mysteryNumber * 5;
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
 }
 
 function deleteProperty(object, property) {
+  delete object.property;
+  return object;
   // remove the property from the object
   // return the object
 }
 
 function newUser(name, email, password) {
+  const user = {
+    name: name,
+    email: email,
+    password: password
+  }
+  return user;
   // create a new object with properties matching the arguments passed in.
   // return the new object
 }
 
 function hasEmail(user) {
+  if(user.email === true) {
+    return true;
+  } else {
+    return false;
+  }
   // return true if the user has a value for the property 'email'
   // otherwise return false
 }
 
 function hasProperty(object, property) {
   // return true if the object has the value of the property argument
+  if(object.property) {
+    return true;
+  } else {
+    return false;
+  }
   // property is a string
   // otherwise return false
 }
 
 function verifyPassword(user, password) {
+  if(user.password === password) {
+    return true;
+  } else {
+    return false;
+  }
   // check to see if the provided password matches the password property on the user object
+
   // return true if they match
   // otherwise return false
 }
 
 function updatePassword(user, newPassword) {
+  user.password = newPassword;
+  return user;
   // replace the existing password on the user object with the value of newPassword
+
   // return the object
 }
 
 function addFriend(user, newFriend) {
+  user.friends.push(newFriend);
+  return user;
   // user has a property called friends that is an array
+
   // add newFriend to the end of the friends array
   // return the user object
 }
 
 function setUsersToPremium(users) {
+  for(let i = 0;i<users.length;i++) {
+    users[i].isPremium = true;
+  }
+  return users;
   // users is an array of user objects.
+
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
 }
 
 function sumUserPostLikes(user) {
+  var total = 0
+    for(let i=0;i<user.posts.length;i++) {
+      total += user.posts[i].likes;
+    }
+    return total;
+
   // user has an array property called 'posts'
   // posts is an array of post objects
   // each post object has an integer property called 'likes'
@@ -79,6 +130,9 @@ function sumUserPostLikes(user) {
 
 function addCalculateDiscountPriceMethod(storeItem) {
   // add a method to the storeItem object called 'calculateDiscountPrice'
+  storeItem.prototype.calculateDiscountPrice = function() {
+
+  }
   // this method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
   // the method then subtracts the discount from the price and returns the discounted price
   // return storeItem at the end of the function
