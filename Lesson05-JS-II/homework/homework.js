@@ -83,17 +83,14 @@ function isPrime(num) {
   for(let i=2;i<num;i++) {
     if(num % i === 0) {
       return false;
-
-    } else  {
-      return num !== 0;
     }
-
   }
   // return true if num is prime.
   // otherwise return false
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
+  return num > 1;
 }
 
 
