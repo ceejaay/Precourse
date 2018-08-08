@@ -4,7 +4,7 @@ function getBiggest(x, y) {
   if(x > y) {
     return x;
   } else if(x < y) {
-    return x;
+    return y;
   } else if(x === y) {
     return x;
   }
@@ -19,7 +19,7 @@ function greeting(language) {
     return 'Ni Hao!';
   } else if(language === 'Spanish') {
     return 'Hola!';
-  } else if(language === undefined) {
+  } else {
     return 'Hello!';
   }
   // return a greeting for three different languages:
@@ -70,6 +70,8 @@ function fizzBuzz(num) {
     return 'buzz';
   } else if(num % 3 === 0) {
     return 'fizz';
+  } else {
+    return num;
   }
   // if num is divisible by 3 return 'fizz'
   // if num is divisible by 5 return 'buzz'
@@ -78,6 +80,15 @@ function fizzBuzz(num) {
 }
 
 function isPrime(num) {
+  for(let i=2;i<num;i++) {
+    if(num % i === 0) {
+      return false;
+
+    } else  {
+      return num !== 0;
+    }
+
+  }
   // return true if num is prime.
   // otherwise return false
   // hint: a prime number is only evenly divisible by itself and 1

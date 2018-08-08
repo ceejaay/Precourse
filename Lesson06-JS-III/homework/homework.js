@@ -6,7 +6,8 @@ function returnFirst(arr) {
 }
 
 function returnLast(arr) {
-  return arr.pop;
+  /* return arr.pop; */
+  return arr.pop();
   // return the last item of the array
 }
 
@@ -85,11 +86,17 @@ function largestNumber(numbers) {
 }
 
 function multiplyArguments() {
-  var numbers = 1;
-  for(let i=0;i<arguments.length;i++) {
-    numbers *= arguments[i];
+  var product = 1;
+  if(arguments.length === 0) {
+    return 0;
+  } else if(arguments.length === 1) {
+    return arguments[0];
+  } else {
+    for(let i=0;i<arguments.length;i++) {
+      product *= arguments[i];
+    }
+  return product;
   }
-  return numbers;
 
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
