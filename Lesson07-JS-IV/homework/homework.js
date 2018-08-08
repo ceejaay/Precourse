@@ -17,6 +17,7 @@ function makeCat(name, age) {
 
 function addProperty(object, property) {
   object.property = null;
+  return object;
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
@@ -24,7 +25,9 @@ function addProperty(object, property) {
 
 function invokeMethod(object, method) {
   /* object.method(); */
-  object['method'];
+  /* object['method']; */
+  /* object.method; */
+  object[method]();
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
@@ -37,7 +40,8 @@ function multiplyMysteryNumberByFive(mysteryNumberObject) {
 }
 
 function deleteProperty(object, property) {
-  delete object['property'];
+  /* delete object.property; */
+  delete object[property];
   return object;
   // remove the property from the object
   // return the object
@@ -55,7 +59,7 @@ function newUser(name, email, password) {
 }
 
 function hasEmail(user) {
-  if(user.email === true) {
+  if('email' in user) {
     return true;
   } else {
     return false;
@@ -133,7 +137,9 @@ function sumUserPostLikes(user) {
 function addCalculateDiscountPriceMethod(storeItem) {
   // add a method to the storeItem object called 'calculateDiscountPrice'
   storeItem.prototype.calculateDiscountPrice = function() {
-
+    var discountPrice = 0;
+    discountPrice = this.price -(this.price * 0.2);
+    return discountPrice;
   };
   // this method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
   // the method then subtracts the discount from the price and returns the discounted price

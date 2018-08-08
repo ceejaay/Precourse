@@ -100,7 +100,7 @@ function greaterThanFifty(num) {
 }
 
 function getRemainder(x, y) {
-  return y/x;
+  return x % y;
   // return the remainder from dividing x by y
   // code here
 }
@@ -177,7 +177,7 @@ function combineNames(firstName, lastName) {
 }
 
 function getGreeting(name) {
-  'Hello '.concat(name + '!');
+  return 'Hello '.concat(name + '!');
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
   // code here
