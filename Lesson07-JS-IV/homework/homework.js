@@ -16,7 +16,7 @@ function makeCat(name, age) {
 }
 
 function addProperty(object, property) {
-  object.property = null;
+  object[property] = null;
   return object;
   // add the property to the object with a value of null
   // return the object
@@ -59,7 +59,12 @@ function newUser(name, email, password) {
 }
 
 function hasEmail(user) {
-  if('email' in user) {
+  /* if(user['email']) { */
+  /*   return true; */
+  /* } else { */
+  /*   return false; */
+  /* } */
+  if(user.email) {
     return true;
   } else {
     return false;
@@ -70,11 +75,16 @@ function hasEmail(user) {
 
 function hasProperty(object, property) {
   // return true if the object has the value of the property argument
-  if(object.property) {
-    return true;
-  } else {
-    return false;
+  for(let key in object) {
+    if(key === property) {
+      return true;
+    } else {
+      return false;
+    }
+
+   
   }
+
   // property is a string
   // otherwise return false
 }
@@ -135,12 +145,13 @@ function sumUserPostLikes(user) {
 }
 
 function addCalculateDiscountPriceMethod(storeItem) {
-  // add a method to the storeItem object called 'calculateDiscountPrice'
-  storeItem.prototype.calculateDiscountPrice = function() {
-    var discountPrice = 0;
-    discountPrice = this.price -(this.price * 0.2);
-    return discountPrice;
+  storeItem = {
+calculateDiscountPrice: function() {
+   return storeItem.price;
+  }
+
   };
+  // add a method to the storeItem object called 'calculateDiscountPrice'
   // this method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
   // the method then subtracts the discount from the price and returns the discounted price
   // return storeItem at the end of the function
