@@ -1,21 +1,35 @@
 // Do not change any of the function names
 
 function invokeCallback(cb) {
+  cb();
   // invoke cb
 }
 
 function sumArray(numbers, cb) {
+  cb(numbers.reduce(function(a, b){
+    return a + b;
+        }));
+
   // sum up all of the integers in the numbers array
   // pass the result to cb
   // no return is necessary
 }
 
 function forEach(arr, cb) {
-  // iterate over arr and pass its values to cb one by one
+  arr.forEach(function(item){
+    return cb(item);
+
+      });
+  // iterate over arr and pass its values to cb one by one;
   // hint: you will be invoking cb multiple times (once for each value in the array)
 }
 
 function map(arr, cb) {
+  var new_array = arr.map(function(index){
+    return cb(index);
+
+      });
+  return new_array;
   // create a new array
   // iterate over each value in arr, pass it to cb, then place the value returned from cb into the new arr
   // the new array should be the same length as the array argument
