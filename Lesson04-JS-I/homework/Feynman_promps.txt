@@ -1,0 +1,11 @@
+Lesson 04 Writing exercise.
+
+Variables. A variable is a little bit of information that a computer can use and sometimes a human can understand. In javascript we can declare a variable by typing var libraryBook = 'Moby Dick'. Or const libraryBook = 'The grapes of Wrath.' Variables can be anything. Numbers, words, letters, mathamatical expressions like pi. They can also be special containers that help humans organize information for a computer to read.
+
+A string is usually a group of letters and numbers that humans can type. Like 'abc' or '123'. Strings always have quotes around them. There's a difference between 'hello' and hello in javascript. 'hello' is a string and can be printed out on a computer screen or on a website. If you don't have quotes aroun a word, they could be a variable. Which is something completely different in JS.
+
+Function. Sometimes in programming you find there are things you have to do over and over again. Like figuring out the discount price of an item. Or combingin first names and last names. You can make these repetative problems easier with a programming tool called function. Usually you give functions a name. That name points to a set of instructions. The computer can use those instructions over and over. So you don't have to do it. Sometimes functions need a bit of information. We call that an argument. The function takes that argument in and spits out a return. The return is the little bit of data that you told the computer you wanted. Like the answer to a hard math problem or how far it is to the nearest park.
+
+if statements: Computers are bad at choosing what you want them to choose. So you have to tell them, like a small child, exactly what to do. That's where if statements come in. You tell the compouter what you want to do if somethign is true. If you want the computer to chime when the temperature reaches 70 degrees. You tell the computer this 'If the temperature is 70 degrees, then beep. Otherwise just keep checking the temperature. 
+
+Boolean values. They are like a coin. Either heads or tails. They can't be both. But a computer only sees 'true' and 'false.' 
