@@ -17,11 +17,7 @@ function counter() {
 }
 
 function cacheFunction(cb) {
-  var thingy = (function(){
-    return function(cb){};
-      })(cb);
-  // use closure to create a cache for the cb function
-  return thingy;
+  the_object = {};
   // the function that you return should accept a single argument and invoke cb with that argument
   // when the function you return is invoked with an argument it should save that argument and its result
   // when the function you return is called again with an argument that it has seen before it should not call cb
