@@ -48,17 +48,24 @@ in this folder, you are in the wrong place.
 /* Exercise Five */
 #exerciseFive {
   display: flex;
-  justify-content: flex-end;
-  space-between; even-space;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
 
 }
 
-/* Place code here */
 
-
-
-/* Exercise Six */
-
+/* /1* Place code here *1/ */
 #exerciseSeven {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
+
+
+/* /1* Exercise Six *1/ */
+
+/* #exerciseSeven { */
+  /* display: flex; */
+/* } */
