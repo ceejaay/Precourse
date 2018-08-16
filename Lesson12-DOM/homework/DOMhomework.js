@@ -2,6 +2,7 @@
   STEP 0: Create an empty array called 'toDoItems'.
 */
 
+const toDoItems = [];
 // code here
 
 /* 
@@ -9,6 +10,7 @@
           Using a querySelector, select the span by it's id ('createdBy'). Then using the innerHTML property,
           add your name to the END of the current innerHTML.
 */
+thing = document.querySelector('createdBy')
 
 // code here
 
@@ -18,7 +20,9 @@
           'complete' which should be set to false. Hint: use the 'this' keyword in the constructor function.
 */
 
-function ToDo () {
+function ToDo (description) {
+  this.description = description;
+  this.complete = false;
   // code here
 }
 
@@ -26,8 +30,11 @@ function ToDo () {
   STEP 3: Add a method called 'completeToDo' to the prototype of the ToDo class. 
           It will not take any arguemnts. 
           Inside the function set the ToDo's 'complete' property to true.
+  
 */
-
+ToDo.prototype.complete = function() {
+  this.complete = true;
+};
 // code here
 
 /*
