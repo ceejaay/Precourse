@@ -54,7 +54,11 @@ ToDo.prototype.complete = function() {
 */
 
 function buildToDo(todo, index) {
+ var toDoShell = document.createElement('div'); 
+  toDoShell.className = 'toDoShell';
+  var toDoText = document.createElement('span');
   // code here
+
 }
 
 /* 
